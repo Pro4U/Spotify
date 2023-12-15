@@ -1,2 +1,1 @@
-Assignment is a Clone of Spotify Website.
-
+Clone of Spotify!
