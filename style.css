@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;    
+    background-color:rgb(12, 4, 41);
+}
+
+.logo{
+    height: 8vh;
+    width: 4vw;
+}
+
+.profileIcon{
+    height: 8vh;
+    width: 4vw;
+}
+
+#website_name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#search{
+    background-color: rgb(139, 243, 252);
+}
+
+nav{
+    height:10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav:first-child li{
+    margin-right:10px;
+}
+
+#favourites{
+    margin-left: 30px;
+}
+
+.bell{
+    width: 3vw;
+    height:6vh;
+}
+
+.main_section{
+    height: 100vh;
+    border: 0.5px solid white;
+}
+
+.img_preview{
+    width: 14vw;
+    height: 38vh;
+}
