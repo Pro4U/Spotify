@@ -56,12 +56,37 @@ nav:first-child li{
     height:6vh;
 }
 
-.main_section{
+
+section{
     height: 100vh;
     border: 0.5px solid white;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .img_preview{
     width: 14vw;
     height: 38vh;
+}
+
+
+div:first-child{
+    margin-top: 70px;
+}
+
+
+section div ul li img{
+    margin: 14px;
+}
+
+/* section div ul li img:hover {
+    width: 14vw;
+    height: 40vh;
+} */
+
+.queue_img_preview{
+    width: 4vw;
+    height: 5vw;
 }
