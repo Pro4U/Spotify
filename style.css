@@ -135,6 +135,7 @@ section:nth-of-type(1) div:first-child div div{
     display: flex;
     flex-direction: row;
     margin: 5px auto;
+    width: 50vw;
 }
 
 section:nth-of-type(1) div:first-child div div ul{
