@@ -58,7 +58,7 @@ nav:first-child li{
 
 
 section{
-    height: 100vh;
+    height: 200vh;
     border: 0.5px solid white;
     margin: 5px;
     display: flex;
@@ -79,14 +79,67 @@ div:first-child{
 
 section div ul li img{
     margin: 14px;
+
 }
 
-/* section div ul li img:hover {
-    width: 14vw;
-    height: 40vh;
-} */
+section div ul li img:hover {
+    border: 2px solid white;
+}
 
 .queue_img_preview{
     width: 4vw;
     height: 5vw;
+}
+
+section  div:nth-of-type(1){
+    margin:20px;
+}
+
+
+
+section div:nth-of-type(2) div{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+}
+
+.heart{
+    width: 2vw;
+    height: 4vh;
+}
+
+section div:nth-of-type(2) div ul li:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+section div:nth-of-type(2) div ul li:nth-of-type(2){
+    font-family:cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+section div:nth-of-type(2) div ul img{
+    margin-left: 5vw;
+}
+
+
+section:nth-of-type(1) div:first-child div div{
+    display: flex;
+    flex-direction: row;
+    margin: 5px auto;
+}
+
+section:nth-of-type(1) div:first-child div div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
 }
