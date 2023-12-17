@@ -100,7 +100,7 @@ nav:first-child li{
 }
 
 .latest-release{
-    background-color: rgb(0, 8, 255);
+    /* background-color: rgb(0, 8, 255); */
     grid-area: latest-release;
     
 }
