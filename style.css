@@ -30,11 +30,17 @@ body{
 
 nav{
     height:10vh;
+    width: 99vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-}
+    background-color: rgb(12, 4, 41);
+    /* background-color: rgb(255, 0, 208); */
+    position: fixed;
+    /* border: 1px solid white; */
+    border-bottom: 0.5px solid white;
+    
+}       
 
 ul{
     list-style: none;
@@ -56,52 +62,60 @@ nav:first-child li{
     height:6vh;
 }
 
+.img_preview {
+    width: 18vw;
+    height: 40vh;
+}
 
-section{
-    height: 200vh;
-    border: 0.5px solid white;
-    margin: 5px;
+.latest_img {
+    width: 5w;
+    height: 10vh;
+}
+
+.parent{
+    height: 100vh;
+    /* border: 0.5px solid white; */
+    /* margin: 5px; */
+    width: 99vw;
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"main-img main-img queue"
+                        "latest-release latest-release queue"
+
+}
+
+.main-img {
+    grid-area: main-img;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
-.img_preview{
-    width: 14vw;
-    height: 38vh;
+.main-img ul li{
+    margin: 20px 20px;
+    /* background-color: yellow; */
+}
+
+.main-img ul li:hover {
+    border: 2px solid rgb(233, 233, 233);    
+}
+
+.latest-release{
+    background-color: rgb(0, 8, 255);
+    grid-area: latest-release;
+    
 }
 
 
-div:first-child{
-    margin-top: 70px;
+.queue{
+    grid-area:queue;
+    border-left: 0.5px solid white;
+    margin-top:100px;
+    /* margin:100px; */
 }
 
-
-section div ul li img{
-    margin: 14px;
-
-}
-
-section div ul li img:hover {
-    border: 2px solid white;
-}
-
-.queue_img_preview{
+.queue_img{
     width: 4vw;
-    height: 5vw;
-}
-
-section  div:nth-of-type(1){
-    margin:20px;
-}
-
-
-
-section div:nth-of-type(2) div{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-
+    height: 8vh;
 }
 
 .heart{
@@ -109,38 +123,33 @@ section div:nth-of-type(2) div{
     height: 4vh;
 }
 
-section div:nth-of-type(2) div ul li:first-child{
+/* queue headline */
+.queue ul:first-child li{
+    width: 100%;
+    justify-content:space-between;
+}
+
+/* list of songs */
+.queue ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* margin: 0 50px 0 50px; */
+    /* margin: 50px auto; */
+
+}
+
+.queue ul li:first-child {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     
 }
 
-
-section div:nth-of-type(2) div ul li:nth-of-type(2){
-    font-family:cursive;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-section div:nth-of-type(2) div ul img{
-    margin-left: 5vw;
-}
-
-
-section:nth-of-type(1) div:first-child div div{
-    display: flex;
-    flex-direction: row;
-    margin: 5px auto;
-    width: 50vw;
-}
-
-section:nth-of-type(1) div:first-child div div ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 10px;
+.sno,
+.queue_img,
+.music-name,
+.artist {
+    margin-right: 30px;
+    margin-top: 10px;
 }
