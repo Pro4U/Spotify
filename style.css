@@ -1,3 +1,7 @@
+:root{
+    --bgcolor:rgb(12, 4, 41);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +10,8 @@
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;    
-    background-color:rgb(12, 4, 41);
+    /* background-color:rgb(12, 4, 41); */
+    background-color: var(--bgcolor);
 }
 
 .logo{
@@ -39,6 +44,7 @@ nav{
     position: fixed;
     /* border: 1px solid white; */
     border-bottom: 0.5px solid white;
+    z-index: 2;
     
 }       
 
@@ -73,15 +79,16 @@ nav:first-child li{
 }
 
 .parent{
-    height: 100vh;
+    /* height: 200vh; */
     /* border: 0.5px solid white; */
     /* margin: 5px; */
-    width: 99vw;
+    /* width: 99vw; */
     display: grid;
     /* grid-template-columns: repeat(3,1fr); */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"main-img main-img queue"
                         "latest-release latest-release queue"
+                        "popular-artist popular-artist queue";
 
 }
 
@@ -91,7 +98,9 @@ nav:first-child li{
 }
 
 .main-img ul li{
-    margin: 20px 20px;
+    /* margin: 5vh 3vh; */
+    margin-top:14vh;
+    margin-left: 3vw;
     /* background-color: yellow; */
 }
 
@@ -105,7 +114,7 @@ nav:first-child li{
     
 }
 
-.latest-heading{
+.latest-heading, .artist_heading{
     margin-left: 2%;
 }
 
@@ -134,8 +143,8 @@ nav:first-child li{
     grid-area:queue;
     border-left: 0.5px solid white;
     margin-top:100px;
-
-    
+    z-index: 1;
+    background-color: var(--bgcolor);
     /* margin:100px; */
 }
 
@@ -178,4 +187,33 @@ nav:first-child li{
 .artist {
     margin-right: 30px;
     margin-top: 10px;
+}
+
+.artist_div1{
+    /* background-color: red; */
+
+    align-items: center;
+}
+
+.artist_img{
+    width: 7vw;
+    height:14vh;
+    border-radius:50%;
+
+}
+
+.popular_artist{
+    grid-area: popular-artist;
+    overflow: hidden;
+
+    /* background-color: red; */
+}
+
+.popular_artist div ul li{
+    padding: 30px;
+    
+}
+
+.artist_list{
+  overflow-x: scroll;
 }
