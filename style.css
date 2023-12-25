@@ -22,7 +22,10 @@ body{
 .profileIcon{
     height: 8vh;
     width: 4vw;
+    border-radius: 50%;
 }
+
+
 
 #website_name{
     font-size: 30px;
@@ -84,12 +87,15 @@ nav:first-child li{
     /* margin: 5px; */
     /* width: 99vw; */
     display: grid;
+    position: relative;
     /* grid-template-columns: repeat(3,1fr); */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"main-img main-img queue"
                         "latest-release latest-release queue"
-                        "popular-artist popular-artist queue";
-
+                        "popular-artist popular-artist queue"
+                        "popular-artist2 popular-artist2 queue"
+                        "latest-english latest-english queue"
+                        "latest-hindi latest-hindi queue";
 }
 
 .main-img {
@@ -144,7 +150,13 @@ nav:first-child li{
     border-left: 0.5px solid white;
     margin-top:100px;
     z-index: 1;
-    background-color: var(--bgcolor);
+    /* background-color: red; */
+    /* background-color: var(--bgcolor); */
+    position: fixed;
+    width:30vw;
+    max-height: 100vh;
+    overflow-y:auto;
+    /* padding-right:50px; */
     /* margin:100px; */
 }
 
@@ -214,6 +226,41 @@ nav:first-child li{
     
 }
 
+.latest-english div ul li{
+    padding: 30px;
+    
+}
+
+.latest-hindi div ul li{
+    padding: 30px;
+    
+}
+
 .artist_list{
   overflow-x: scroll;
+}
+
+.popular_artist2{
+    grid-area: popular-artist2;
+    overflow: hidden;
+    background-color: rgb(18, 3, 78);;
+    /* background-color: red; */
+}
+
+.popular_artist2 div ul li{
+    padding: 20px;
+}
+
+.latest-english{
+    grid-area: latest-english;
+    overflow: hidden;
+    /* background-color: red; */
+    
+}
+
+.latest-hindi{
+    grid-area: latest-hindi;
+    overflow: hidden;
+    /* background-color: red; */
+    
 }
